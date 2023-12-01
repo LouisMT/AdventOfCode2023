@@ -21,6 +21,6 @@ public class Day1Part1SolverTest
 
         var solution = await sut.Solve(input);
 
-        Assert.Equal("", solution);
+        Assert.Equal("54630", solution);
     }
 }
