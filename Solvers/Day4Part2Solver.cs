@@ -9,7 +9,7 @@ public class Day4Part2Solver : ISolver
     {
         var cardCount = new Dictionary<int, int>();
 
-        await foreach(var line in InputHelper.Lines(input))
+        await foreach (var line in InputHelper.Lines(input))
         {
             var card = Parse(line);
 
@@ -19,7 +19,7 @@ public class Day4Part2Solver : ISolver
             var copyCount = cardCount.GetValueOrDefault(card.Number);
             var winAmount = card.MyNumbers.Where(n => card.WinningNumbers.Contains(n)).Count();
 
-            for(var inc = winAmount; inc > 0; inc--)
+            for (var inc = winAmount; inc > 0; inc--)
             {
                 cardCount.TryAdd(card.Number + inc, 0);
                 cardCount[card.Number + inc] += cardCount[card.Number];

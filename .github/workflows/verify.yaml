@@ -18,4 +18,4 @@ jobs:
       - name: Build
         run: dotnet build -warnaserror
       - name: Test
-        run: dotnet test
+        run: dotnet test -c Release

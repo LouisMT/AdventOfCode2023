@@ -9,7 +9,7 @@ public class Day4Part1Solver : ISolver
     {
         var sum = 0;
 
-        await foreach(var line in InputHelper.Lines(input))
+        await foreach (var line in InputHelper.Lines(input))
         {
             var card = Parse(line);
             var winAmount = card.MyNumbers.Where(n => card.WinningNumbers.Contains(n)).Count();
