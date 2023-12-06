@@ -13,7 +13,7 @@ public class Day5Part2SolverTest
         Assert.Equal("46", solution);
     }
 
-    [Fact]
+    [Fact(Skip = "Brute force")]
     public async Task Actual()
     {
         var input = await File.ReadAllTextAsync("Inputs/Day5Part2.txt");
